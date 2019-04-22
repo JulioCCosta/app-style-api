@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::prefix('personalfinance')->group(function() {
+    Route::get('/', 'PersonalFinanceController@index');
 });
-
-Route::get('teste','AccountController@index');
